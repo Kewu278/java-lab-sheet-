@@ -1,0 +1,566 @@
+Object Oriented Programming JAVA 
+
+1. Write a simple “Hello World” java program, compilation, debugging,
+executing using java compiler and interpreter.
+class prog1
+{
+public static void main(String args[])
+{
+System.out.println("Hello World");
+}
+}
+Out Put : -
+
+
+Object Oriented Programming JAVA Roll.No : - 03
+2. Write a program to pass Starting and Ending limit and print all prime
+numbers and Fibonacci numbers between this range
+class Fibonacci
+{
+public static void main(String args[])
+{
+int n1=1,n2=10,i,j;
+int a=0,b=1,c;
+System.out.println("Prime Numbers between "+n1+" and "+n2+" :");
+for(i=n1;i<=n2;i++)
+{
+for(j=2;j<n2;j++)
+{
+if(i%j==0)
+{
+break;
+}
+}
+if(j==i)
+{
+System.out.println(i);
+}
+}
+System.out.println("Fibonacci Numbers "+n1+" and "+n2+" :");
+for(i=n1;i<=n2-2;i++)
+{
+c=a+b;
+if(c>n1 && c<n2)
+{
+System.out.println(c);
+}
+a=b;
+b=c;
+}
+}
+}
+Out Put : -
+
+
+3. Write a java program to check whether number is palindrome or not
+class palindrom
+{
+public static void main(String args[])
+{
+int n=151,ans=0,d,n2;
+n2=n;
+System.out.println("Orignal: "+n2);
+while(n>0){
+d=n%10;
+ans=(ans*10)+d;
+n=n/10;
+}
+System.out.println("Reverse: "+ans);
+if(ans==n2){
+System.out.println("Palindrom");
+}
+else{
+}
+}
+}
+System.out.println("Not Palindrom");
+Output:-
+
+
+4. Write a java program to print value of x^n. Input: x=5 Input: n=3
+Output: 125
+class prog4
+{
+public static void main(String args[])
+{
+int x=5,n=3,ans=1,i=1;
+//for(i=1;i<=n;i++)
+while(i<=n)
+{
+ans=ans*x;
+i++;
+}
+System.out.println("x = "+x);
+System.out.println("n = "+n);
+System.out.println("x^n = "+ans);
+}
+}
+Output:-
+
+5. Write a java program to check Armstrong number.
+class armstrom
+{
+public static void main(String args[])
+{
+int b,a=123,d,n,ans=0;
+int tmp=a;
+System.out.println("a="+a);
+while(a!=0){
+d=a%10;
+ans=ans+(d*d*d);
+a=a/10;
+}
+if(ans==tmp){
+System.out.println(" armstrom");
+}
+else{
+}
+}
+}
+System.out.println(" not armstrom");
+Output:-
+
+
+6. Write a program in Java to find minimum of three numbers using
+conditional operator.
+class conoopr
+{
+int a=20,b=10,c=30;
+String d;
+void display(){
+System.out.println("a="+a);
+System.out.println("b="+b);
+System.out.println("c="+c);
+d=c < ((a<b)? a:b)? "C is small":((a<b)? "a is small" :"b is small");
+System.out.println(d);
+}
+}
+class min
+{
+public static void main(String args[]){
+conoopr ob=new conoopr();
+ob.display();
+}
+}
+Output:-
+
+7. Write a java program which should display maximum number of given
+4 numbers.
+class max
+{
+public static void main(String args[])
+{
+int a=100,b=100,c=100,d=100;
+System.out.println("a="+a);
+System.out.println("b="+b);
+System.out.println("c="+c);
+System.out.println("d="+d);
+if(a>b && a>c && a>d)
+{
+System.out.println("A is big");
+}
+else if(b>a && b>c && b>d)
+{
+System.out.println("B is big");
+}
+else if(c>a && c>b && c>d)
+{
+System.out.println("C is big");
+}
+else if(d>a && d>b && d>c)
+{
+}
+}
+Output:-
+}
+else
+{
+}
+System.out.println("D is big");
+System.out.println("Same number! plz enter a different value");
+
+8. Write a program in Java to multiply two matrix. Declare a class Matrix
+where 2D array is declared as instance variable and array should be
+initialized, within class.
+class array
+{
+public static void main(String args[])
+{
+int a[][]={{1,1,1},{2,2,2},{3,3,3}};
+int b[][]={{1,1,1},{2,2,2},{3,3,3}};
+int c[][]=new int[3][3];
+int i,j,k;
+System.out.println("set A = ");
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+System.out.print("\t"+a[i][j]);
+}
+System.out.println();
+}
+System.out.println();
+System.out.println();
+System.out.println("set B = ");
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+System.out.print("\t"+b[i][j]);
+}
+System.out.println();
+}
+System.out.println();
+System.out.println();
+System.out.println("sat C = A*B =");
+
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+c[i][j]=0;
+for(k=0;k<3;k++){
+c[i][j]+=a[i][k]*b[k][j];
+}
+System.out.print("\t"+c[i][j]);
+}
+System.out.println();
+}
+}
+}
+Output:-
+
+9. Write a java program to create a class “Matrix” that would contain
+integer values having varied Numbers of columns for each row. Print
+row-wise sum of the integer values for each row.
+class leb9
+{
+public static void main(String args[])
+{
+int a[][]={{1,2,3},{4,5,6},{7,8,9}};
+//int b[][]={{1,2,3},{1,2,3},{1,2,3}};
+//int sum[][] = new int[5][5];
+int sum;
+int i,j;
+System.out.println("Matrix 1:");
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+System.out.print(" "+a[i][j]);
+}
+System.out.println();
+}
+for(i=0;i<3;i++)
+{
+sum=0;
+for(j=0;j<3;j++)
+{
+sum=sum+a[i][j];
+}
+
+System.out.println("Sum of Row "+sum);
+}
+for(i=0;i<3;i++)
+{
+sum=0;
+for(j=0;j<3;j++)
+{
+sum=sum+a[j][i];
+}
+System.out.println("Sum of column "+sum);
+}
+}
+}
+Output:-
+
+10.Write a Java application which takes several command line arguments,
+which are supposed to be names of students and prints output as given
+below: (Suppose we enter 3 names then output should be as follows)..
+Number of arguments = 3 1.: First Student Name is = Arun 2.: Second
+Student Name is = Hiren 3.Third Student Name is = Hitesh
+class prog10
+{
+public static void main(String args[])
+{
+int a,i;
+a=args.length;
+System.out.println(a);
+for(i=0;i<a;i++)
+{
+System.out.println(i+1+" Name : "+args[i]);
+}
+}
+}
+Output:-
+
+11.Write a Java application to count and display frequency of letters and
+digits from the String given by user as command-line argument
+public class prog11
+{
+public static void main(String args[])
+{
+String str=args[0];
+int[] fre=new int[str.length()];
+int i,j;
+char string[]=str.toCharArray();
+for(i=0;i<str.length();i++)
+{
+fre[i]=1;
+for(j=i+1;j<str.length();j++)
+{
+if(string[i]==string[j])
+{
+fre[i]++;
+string[j]='0';
+}
+}
+}
+System.out.println("Character and their corresponding frequencies:");
+for(i=0;i<fre.length;i++)
+{
+if(string[i]!=' ' &&string[i]!='0')
+{
+System.out.println(string[i]+"-"+fre[i]);
+}
+
+}
+}
+}
+Output:-
+
+12.Create a class “Student” that would contain enrollment No, name, and
+gender and marks as instance variables and count as static variable
+which stores the count of the objects; constructors and display().
+Implement constructors to initialize instance variables
+import java.util.*;
+class prog
+{
+int enrollment_no,m1,m2,m3;
+String name;
+String gender;
+static int count;
+prog()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter Enrollemnt_no : ");
+enrollment_no = sc.nextInt();
+System.out.println("Enter Name : ");
+name = sc.next();
+System.out.println("Enter Gender : ");
+gender = sc.next();
+System.out.println("Enter Marks of subject one : ");
+m1 = sc.nextInt();
+System.out.println("Enter Marks of subject two : ");
+m2 = sc.nextInt();
+System.out.println("Enter Marks of subject three : ");
+m3 = sc.nextInt();
+count=m1+m2+m3;
+}
+void display()
+
+{
+System.out.println("Enrollemnt_no : "+ enrollment_no);
+System.out.println("Name : "+ name);
+System.out.println("Gender : "+ gender);
+System.out.println("Total Marks : "+ count);
+}
+}
+class student
+{
+public static void main(String args[])
+{
+prog ob=new prog();
+ob.display();
+}
+}
+Output:-
+
+13 Write a program in Java to demonstrate use of this keyword. Check
+whether this can access the Static variables of the class or not.
+/*
+Date:04/12/2021
+Write a program in Java to demonstrate use of this keyword.
+Check whether this can access the Static variables of the class or not.
+*/
+class myclass
+{
+int enrollmentNo = 03;
+String name = "keval";
+String gender = "Male";
+int marks = 95;
+public void display()
+{
+System.out.println("Your Roll No is : " + enrollmentNo);
+System.out.println("Your Name is : " +name);
+System.out.println("Your Gender is : "+gender);
+System.out.println("Your Marks is : "+marks);
+}
+public myclass()
+{
+this.enrollmentNo=enrollmentNo;
+this.name=name;
+this.gender=gender;
+this.marks=marks;
+}
+public static void main(String args[])
+{
+myclass count = new myclass();
+
+count.display();
+}
+}
+Output:-
+
+Q-14 Create a class “Rectangle” that would contain length and width as an
+instance variable and count as a static variable. Define constructors
+[constructor overloading (default, parameterized and copy)] to initialize
+variables of objects. Define methods to find area and to display variables’
+value of objects which are created. [Note: define initializer block, static
+initializer block and the static variable and method. Also demonstrate the
+sequence of execution of initializer block and static initialize block]
+class react
+{
+double length,width;
+react()
+{
+double a=10,b=20;
+length=a;
+width=b;
+}
+react(double a,double b)
+{
+length=a;
+width=b;
+}
+void area()
+{
+double res;
+res= length*width;
+System.out.println("Area of Rectangle "+res);
+}
+}
+class reactangle
+{
+public static void main(String args[])
+
+{
+react ob=new react();
+react ob2=new react(30,40);
+ob.area();
+ob2.area();
+}
+}
+Output:-
+
+Q-15 Write a java program static block which will be executed before main
+( ) method in a class.
+Program:
+public class myclass
+{
+public static void main(String [] args)
+{
+}
+static
+{
+}
+}
+System.out.println("Main method");
+System.out.println("Static block");
+Output:-
+
+Q-25. Assume that there are two packages, student and exam. A student
+package contains
+Student class and the exam package contains Result class. Write a program
+that generates mark sheet for students.
+student.java
+package studentinfo;
+public class student
+{
+int no;
+String name;
+String lastName;
+public student(int no, String name, String lastName)
+{
+this.no=no;
+this.name=name;
+this.lastName=lastName;
+}
+public void displayResult()
+{
+System.out.println("Your Roll No is : " + no);
+System.out.println("Your Name is : " +name);
+System.out.println("Your Last Name is : "+lastName);
+}
+}
+//result.java
+package exam;
+import studentinfo.*;
+import java.util.Scanner;
+public class result
+{
+
+public static void main(String args[])
+{
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter Roll No : ");
+int no = sc.nextInt();
+System.out.println("Enter Name : ");
+String name = sc.next();
+System.out.println("Enter Last Name : ");
+String lastName = sc.next();
+student obj = new student(no,name,lastName);
+obj.displayResult();
+}
+}
+Output:-
+
+Q-26. Define a class A in package apack. In class A, three variables are
+defined of access modifiers protected, private and public. Define class B in
+package bpack which extends A and write display method which accesses
+variables of class A. Define class C in package cpack which has one method
+display() in that create one object of class A and display its variables.
+Define class ProtectedDemo in package dpack in which write main ()
+method. Create objects of class B and C and class display method for both
+these objects.
+package apack;
+public class a
+{
+}
+b.java
+public int x = 10;
+private int y = 20;
+protected int z = 30;
+package bpack;
+import apack.*;
+public class b extends a
+{
+public void display()
+{
+}
+}
+c.java
+System.out.println("Public: "+x);
+//System.out.println("private"+y); can't accsess private variable
+System.out.println("Protected : "+z);
+package cpack;
+import apack.*;
+public class c
+{
+public void display(){
+a ob = new a();
+}
+}
+d.java
+System.out.println("Public : "+ob.x);
+//System.out.println("Public"+ob.y);
+//System.out.println("Public"+ob.z);
+package dpack;
+import bpack.*;
+import cpack.*;
+public class d{
+public static void main(String args[]){
+System.out.println("This is for extends class b : ");
+b ob = new b();
+ob.display();
+System.out.println("This is for object class c : ");
+c ob2 = new c();
+ob2.display();
+}
+}
+Output:-
+
